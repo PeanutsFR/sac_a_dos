@@ -5,19 +5,26 @@
 #include <string.h>
 
 
+int main (int argc, char *argv[]) {
 
+/* définition du tableau d'objets */
+objet *tabObjets = NULL;
 
-int main (int argc, int argv[]) {
+/* définition de la capacité */
+int capacite = 0;
 
+/* on prend le fichier data en argument sur la ligne de commande */
+char *filename = argv[1];
 
-int tailleTab = 0;
-objet* tabObjets = NULL;
+/* on lit les données du fichier data et on les parse dans le tableau d'objets*/
+lecture(filename, &tabObjets, &capacite);
 
-tabObjets = malloc(tailleTab * sizeof(objet));
+printf("capacite : %i\n", capacite);
 
-
-lecture(filename, &tabObjets);
-
+// printf("tabObjets[1]->poids : %i\n", tabObjets[1]->poids);
+// PROBLEME D'ECRITURE DANS LE TABLEAU :
+// il faut écrire dans le tableau d'objets de manière à conserver les modifications une fois qu'on sort de la fonction lecture.
+// Pour l'instant, on ne peux pas afficher tabObjets[i]->poids dans le main (sacados.c) à cause de ce souci.
 
 
 }
