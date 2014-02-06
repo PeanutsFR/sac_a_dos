@@ -1,0 +1,7 @@
+Structure des données d'entrées .data :
+
+[nbObjets]         [capaciteSac]
+[masseObjet1]  [valeurObjet1]
+[masseObjet2]  [valeurObjet3]
+...
+[masseObjetN]  [valeurObjetN]
